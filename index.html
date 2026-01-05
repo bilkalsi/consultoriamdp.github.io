@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estudio Jurídico | Argentina</title>
+  <meta name="description" content="Estudio jurídico en Argentina. Asesoramiento legal claro, profesional y confiable." />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1f2a44;
+      --secondary: #c9a24d;
+      --bg-light: #f6f7f9;
+      --text-dark: #1a1a1a;
+      --text-muted: #6b7280;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background: white;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(31,42,68,0.85), rgba(31,42,68,0.85)), url('hero.jpg') center/cover;
+      color: white;
+      padding: 100px 16px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 32px;
+      background: var(--secondary);
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 999px;
+    }
+
+    section {
+      padding: 80px 16px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .contact {
+      background: var(--bg-light);
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-family: inherit;
+    }
+
+    textarea { resize: vertical; min-height: 120px; }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 40px 16px;
+      font-size: 0.9rem;
+    }
+
+    /* App & Mobile Friendly */
+    @media (max-width: 600px) {
+      .nav a { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Estudio Jurídico</div>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Asesoramiento Legal Confiable</h1>
+  <p>Brindamos soluciones jurídicas claras y efectivas, adaptadas a la realidad legal de la República Argentina.</p>
+  <a href="#contacto" class="btn">Solicitar consulta</a>
+</section>
+
+<section id="servicios">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nuestros Servicios</h2>
+      <p>Especialización y compromiso profesional</p>
+    </div>
+
+    <div class="services">
+      <div class="card">
+        <h3>Derecho Civil</h3>
+        <p>Contratos, responsabilidad civil y conflictos patrimoniales.</p>
+      </div>
+      <div class="card">
+        <h3>Derecho Laboral</h3>
+        <p>Asesoramiento a trabajadores y empleadores.</p>
+      </div>
+      <div class="card">
+        <h3>Derecho Comercial</h3>
+        <p>Empresas, sociedades y relaciones comerciales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="container about">
+    <div>
+      <h2>Sobre el Estudio</h2>
+      <p>Somos un estudio jurídico orientado a brindar soluciones legales prácticas, con una atención cercana y personalizada. Nuestra prioridad es la confianza del cliente y la excelencia profesional.</p>
+    </div>
+    <img src="about.jpg" alt="Equipo legal">
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nuestro Equipo</h2>
+      <p>Profesionales matriculados con actuación en todo el país</p>
+    </div>
+    <div class="services">
+      <div class="card">
+        <h3>Dra. María González</h3>
+        <p>Derecho Civil y Comercial · Matrícula CPACF</p>
+      </div>
+      <div class="card">
+        <h3>Dr. Juan Pérez</h3>
+        <p>Derecho Laboral · Asesoramiento a empresas</p>
+      </div>
+      <div class="card">
+        <h3>Dra. Lucía Fernández</h3>
+        <p>Litigios y Resolución de Conflictos</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contacto</h2>
+      <p>Respondemos a la brevedad</p>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Nombre y apellido" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Consulta"></textarea>
+      <button class="btn" type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Estudio Jurídico – Argentina</p>
+</footer>
+
+<a href="https://wa.me/5490000000000" class="whatsapp" target="_blank" aria-label="WhatsApp">
+  💬
+</a>
+
+<style>
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 999;
+}
+</style>
+
+
+</body>
+</html>
