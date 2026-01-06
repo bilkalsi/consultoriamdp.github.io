@@ -199,7 +199,6 @@
     <div class="section-title">
       <h2>Nuestros Servicios</h2>
       <p>Especialización y compromiso profesional</p>
-      <p>MODELO DE PRESTACIÓN DEL SERVICIO</p>
     </div>
 
     <div class="services">
@@ -287,12 +286,21 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
       <p>Respondemos a la brevedad</p>
     </div>
 
-    <form>
-      <input type="text" placeholder="Nombre y apellido" required>
-      <input type="email" placeholder="Correo electrónico" required>
-      <textarea placeholder="Consulta"></textarea>
-      <button class="btn" type="submit">Enviar mensaje</button>
-    </form>
+    <form id="contactForm"
+      action="https://formsubmit.co/consultoriamdp81@gmail.com"
+      method="POST">
+
+  <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+  <input type="email" name="email" placeholder="Correo electrónico" required>
+  <textarea name="mensaje" placeholder="Consulta" required></textarea>
+
+  <!-- Configuración FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <button class="btn" type="submit">Enviar mensaje</button>
+</form>
+
   </div>
 </section>
 
@@ -310,7 +318,7 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
 
 </footer>
 
-<a href="https://wa.me/5490000000000" class="whatsapp" target="_blank" aria-label="WhatsApp">
+<a href="https://wa.me/+5492236009268" class="whatsapp" target="_blank" aria-label="WhatsApp">
   💬
 </a>
 
