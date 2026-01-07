@@ -175,15 +175,6 @@
     }
   </style>
 </head>
-<script>
-  const form = document.getElementById("contactForm");
-
-  form.addEventListener("submit", function () {
-    setTimeout(() => {
-      alert("Gracias por tu consulta, a la brevedad te respondemos.");
-    }, 100);
-  });
-</script>
 
 <body>
 
@@ -295,7 +286,6 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
       <h2>Contacto</h2>
       <p>Respondemos a la brevedad</p>
     </div>
-
     <form id="contactForm"
       action="https://formsubmit.co/consultoriamdp81@gmail.com"
       method="POST">
@@ -304,8 +294,9 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
   <input type="email" name="email" placeholder="Correo electrónico" required>
   <textarea name="mensaje" placeholder="Consulta" required></textarea>
 
-  <!-- Configuración FormSubmit -->
+  <!-- FormSubmit config -->
   <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Nueva consulta legal">
   <input type="hidden" name="_template" value="table">
 
   <button class="btn" type="submit">Enviar mensaje</button>
@@ -352,9 +343,19 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
 }
 </style>
 
+  <script>
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function () {
+    setTimeout(() => {
+      alert("Gracias por tu consulta, a la brevedad te respondemos.");
+    }, 100);
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
