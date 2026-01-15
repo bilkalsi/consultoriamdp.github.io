@@ -6,7 +6,13 @@
   <title>Estudio Jurídico | Argentina</title>
   <meta name="description" content="Estudio jurídico en Argentina. Asesoramiento legal claro, profesional y confiable." />
 
-  <!-- Google Font -->
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1f2a44">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -46,12 +52,7 @@
       align-items: center;
     }
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
+    .logo img { height: 40px; }
 
     .nav a {
       margin-left: 20px;
@@ -89,16 +90,13 @@
       text-decoration: none;
       font-weight: 600;
       border-radius: 999px;
+      border: none;
+      cursor: pointer;
     }
 
-    section {
-      padding: 80px 16px;
-    }
+    section { padding: 80px 16px; }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+    .container { max-width: 1100px; margin: auto; }
 
     .section-title {
       text-align: center;
@@ -124,11 +122,6 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-
     .about {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -141,9 +134,7 @@
       border-radius: 20px;
     }
 
-    .contact {
-      background: var(--bg-light);
-    }
+    .contact { background: var(--bg-light); }
 
     form {
       max-width: 500px;
@@ -169,7 +160,44 @@
       font-size: 0.9rem;
     }
 
-    /* App & Mobile Friendly */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      text-decoration: none;
+      z-index: 999;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .modal-box {
+      background: white;
+      padding: 30px;
+      max-width: 400px;
+      width: 90%;
+      border-radius: 16px;
+      text-align: center;
+    }
+
     @media (max-width: 600px) {
       .nav a { display: none; }
     }
@@ -180,7 +208,9 @@
 
 <header>
   <div class="nav">
-    <div class="logo"><img src="images/logo.jpg" alt="Consultoría MDP" style="height:40px;"></div>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Consultoría MDP">
+    </div>
     <nav>
       <a href="#servicios">Servicios</a>
       <a href="#nosotros">Nosotros</a>
@@ -201,20 +231,10 @@
       <h2>Nuestros Servicios</h2>
       <p>Especialización y compromiso profesional</p>
     </div>
-
     <div class="services">
-      <div class="card">
-        <h3>Derecho Civil</h3>
-        <p>Contratos, responsabilidad civil y conflictos patrimoniales.</p>
-      </div>
-      <div class="card">
-        <h3>Derecho Laboral</h3>
-        <p>Asesoramiento a trabajadores y empleadores.</p>
-      </div>
-      <div class="card">
-        <h3>Derecho Comercial</h3>
-        <p>Empresas, sociedades y relaciones comerciales.</p>
-      </div>
+      <div class="card"><h3>Derecho Civil</h3><p>Contratos y conflictos patrimoniales.</p></div>
+      <div class="card"><h3>Derecho Laboral</h3><p>Asesoramiento a trabajadores y empleadores.</p></div>
+      <div class="card"><h3>Derecho Comercial</h3><p>Empresas y sociedades.</p></div>
     </div>
   </div>
 </section>
@@ -223,10 +243,7 @@
   <div class="container about">
     <div>
       <h2>Sobre el Estudio</h2>
-      <p>Somos una plataforma de Asistencia Legal Digital orientada a brindar orientación jurídica remota de primera instancia, de manera accesible, clara y confiable, a través de canales digitales.
-Nuestro objetivo es acercar el conocimiento legal a las personas, facilitando el acceso a información y asesoramiento jurídico básico para la resolución de conflictos cotidianos, mediante la intervención de abogados matriculados, bajo estándares profesionales y éticos.
-La plataforma actúa como un medio tecnológico de conexión entre usuarios y profesionales del derecho, sin sustituir la consulta presencial ni el ejercicio tradicional de la abogacía
-</p>
+      <p>Somos una plataforma de Asistencia Legal Digital orientada a brindar orientación jurídica remota de primera instancia.</p>
     </div>
     <img src="images/about.jpg" alt="Equipo legal">
   </div>
@@ -238,19 +255,26 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
       <h2>Nuestro Equipo</h2>
       <p>Hacé clic en el nombre para ver el perfil profesional</p>
     </div>
-
     <div class="services">
       <details class="card">
-        <summary><strong>Dr. Julio Cesar Baltazar</strong></summary>
-        
-        <p>Abogada especializada en Derecho Civil y Comercial. Matrícula CPACF. Atención y asesoramiento en todo el país.</p>
-      </details>
+  <summary><strong>Dr. Julio Cesar Baltazar</strong></summary>
+  <p>
+    Abogado matriculado. Especialista en Derecho Civil y Comercial.
+    Brinda asesoramiento jurídico en materia contractual, responsabilidad civil
+    y conflictos patrimoniales, con atención profesional en todo el territorio
+    de la República Argentina.
+  </p>
+</details>
 
       <details class="card">
-        <summary><strong>Dr. Edgar Daniel Vulcano</strong></summary>
-        
-        <p>Abogado laboralista. Asesoramiento a trabajadores y empresas. Experiencia en litigios y conciliaciones.</p>
-      </details>
+  <summary><strong>Dr. Edgar Daniel Vulcano</strong></summary>
+  <p>
+    Abogado especializado en Derecho Laboral.
+    Asesoramiento integral a trabajadores y empleadores en relaciones laborales,
+    despidos, conciliaciones y conflictos individuales y colectivos.
+  </p>
+</details>
+
     </div>
   </div>
 </section>
@@ -263,17 +287,20 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
     <div class="services">
       <div class="card">
         <h3>Misión</h3>
-        <p>Brindar asistencia legal digital de calidad, permitiendo a las personas comprender sus derechos,
-            obligaciones y opciones legales, de forma rápida, segura y accesible,
-            contribuyendo a la prevención de conflictos y a una mejor toma de decisiones jurídicas.
+        <p>
+          Brindar orientación jurídica accesible, clara y confiable a través de
+          medios digitales, facilitando el acceso al conocimiento legal y
+          promoviendo soluciones prácticas para conflictos cotidianos,
+          con intervención de abogados matriculados.
         </p>
       </div>
 
       <div class="card">
         <h3>Visión</h3>
-        <p>Ser una plataforma de referencia en servicios jurídicos digitales,
-            integrada a ecosistemas tecnológicos y financieros, que promueva el acceso a la orientación legal,
-            la innovación en la prestación de servicios profesionales y el fortalecimiento de la cultura legal en la sociedad
+        <p>
+          Consolidarnos como una plataforma legal digital de referencia a nivel
+          nacional, reconocida por su ética profesional, calidad de atención e
+          innovación en el acceso a la justicia.
         </p>
       </div>
     </div>
@@ -286,76 +313,61 @@ La plataforma actúa como un medio tecnológico de conexión entre usuarios y pr
       <h2>Contacto</h2>
       <p>Respondemos a la brevedad</p>
     </div>
-    <form id="contactForm"
-      action="https://formsubmit.co/consultoriamdp81@gmail.com"
-      method="POST">
 
-  <input type="text" name="nombre" placeholder="Nombre y apellido" required>
-  <input type="email" name="email" placeholder="Correo electrónico" required>
-  <textarea name="mensaje" placeholder="Consulta" required></textarea>
-
-  <!-- FormSubmit config -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Nueva consulta legal">
-  <input type="hidden" name="_template" value="table">
-
-  <button class="btn" type="submit">Enviar mensaje</button>
-</form>
-
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Nombre y apellido" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="message" placeholder="Consulta" required></textarea>
+      <button class="btn" type="submit">Enviar mensaje</button>
+    </form>
   </div>
 </section>
 
-  <footer>
+<footer>
   <p>© 2026 Estudio Jurídico – Argentina</p>
-
-  <p style="margin-top:10px;">
-    <a href="terminos.html" style="color:#fff;text-decoration:underline;margin-right:15px;">
-      Términos y Condiciones
-    </a>
-    <a href="privacidad.html" style="color:#fff;text-decoration:underline;">
-      Política de Privacidad
-    </a>
+  <p>
+    <a href="terminos.html" style="color:#fff;">Términos y Condiciones</a> |
+    <a href="privacidad.html" style="color:#fff;">Política de Privacidad</a>
   </p>
-
 </footer>
 
-<a href="https://wa.me/+5492236009268" class="whatsapp" target="_blank" aria-label="WhatsApp">
-  💬
-</a>
+<a href="https://wa.me/5490000000000" class="whatsapp" target="_blank">💬</a>
 
-<style>
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  text-decoration: none;
-  z-index: 999;
-}
-</style>
+<!-- Success Modal -->
+<div id="successModal" class="modal-overlay">
+  <div class="modal-box">
+    <h3>Gracias por tu consulta</h3>
+    <p>A la brevedad te respondemos.</p>
+    <button class="btn" onclick="closeModal()">Cerrar</button>
+  </div>
+</div>
 
-  <script>
+<script>
   const form = document.getElementById("contactForm");
+  const modal = document.getElementById("successModal");
 
-  form.addEventListener("submit", function () {
-    setTimeout(() => {
-      alert("Gracias por tu consulta, a la brevedad te respondemos.");
-    }, 100);
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    fetch("https://formsubmit.co/consultoriamdp81@gmail.com", {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(() => {
+      modal.style.display = "flex";
+      form.reset();
+    });
   });
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js");
+    });
+  }
 </script>
 
 </body>
 </html>
-
-
-
-
